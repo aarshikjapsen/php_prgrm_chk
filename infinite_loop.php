@@ -1,6 +1,16 @@
-while (true) {
-    echo "This is an infinite loop. ";
+$counter = 0;
 
-    // Sleep for 1 second to avoid excessive CPU usage
-    sleep(1);
+while (true) {
+    $counter++;
+    
+    if ($counter % 2 == 0) {
+        echo "Even number: $counter\n";
+    } else {
+        echo "Odd number: $counter\n";
+    }
+
+    if ($counter >= 100) {
+        $counter = 0; // Reset the counter after reaching 100
+    }
 }
+
